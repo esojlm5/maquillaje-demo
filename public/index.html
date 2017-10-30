@@ -76,43 +76,43 @@
                         </ul>
                     </div>
                 </div>
-                <div class="second-mkup" v-if="labioStatus == true">
+                <div class="second-mkup" v-if="labioValue == 1">
                         <div class="row type-mkup">
                             <div class="type-mkup__top col-12">
                                 <div class="row">
                                     <div class="type-mkup__title text-center text-md-left col-md-5"><h4>labios</h4></div>
                                     <div class="type-mkup--lcontainer col-md-7">
-                                        <ul class="type-mkup__list row">
-                                            <li class="col-4">
-                                                <div class="row">
-                                                    <img src="" alt="" class="col-md-4">
-                                                    <h5 class="col-md-8">barra</h5>
-                                                </div>
-                                            </li>
-                                            <li class="col-4">
-                                                <div class="row">
-                                                    <img src="" alt="" class="col-md-4">
-                                                    <h5 class="col-md-8">barra</h5>
-                                                </div>
-                                            </li>
-                                            <li class="col-4">
-                                                <div class="row">
-                                                    <img src="" alt="" class="col-md-4">
-                                                    <h5 class="col-md-8">barra</h5>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
+                                    <ul class="type-mkup__list row">
+                                        <li class="col-4" v-on:click="activeTabSlider(0,$event)" :class="{'active' : tabSlider === 0}">
+                                            <div class="row">
+                                                <img src="" alt="" class="col-md-4">
+                                                <h5 class="col-md-8">barra</h5>
+                                            </div>
+                                        </li>
+                                        <li class="col-4" v-on:click="activeTabSlider(1,$event)" :class="{'active' : tabSlider === 1}">
+                                            <div class="row">
+                                                <img src="" alt="" class="col-md-4">
+                                                <h5 class="col-md-8">liquido</h5>
+                                            </div>
+                                        </li>
+                                        <li class="col-4" v-on:click="activeTabSlider(2,$event)" :class="{'active' : tabSlider === 2}">
+                                            <div class="row">
+                                                <img src="" alt="" class="col-md-4">
+                                                <h5 class="col-md-8">otro</h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                                 </div>
                             </div>
-                            <div class="type-mkup__bottom col-12">
+                            <div class="type-mkup__bottom col-12" v-if="labioStatus">
                                 <div class="row">
                                     <div class="type-mkup__title col-md-5 hidden-sm-down">
                                         <h5>Privat en tus labios</h5>
                                         <p>Selecciona tu formato favorito y mira nuestras opciones para ti.</p> 
                                     </div>
                                     <div class="type-mkup--slider col-12 col-md-7">
-                                        <div class="type-mkup--slider-container type-mkup-slider">
+                                        <div class="clas-1" :class="preSlider()" v-if="tabSlider == 0">
                                             <div class="type-mkup--slider-item">
                                                 <div class="row">
                                                     <img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">
@@ -170,9 +170,45 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="type-mkup--slider-container">
+                                        <div class="clas-2" :class="preSlider()" v-if="tabSlider == 1">
                                             <div class="type-mkup--slider-item row">
-                                                <img class="col-5 col-md-12" src="" alt="">
+                                                <img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">
+                                                <div class="type-mkup--slider-info col-7 col-md-12">
+                                                    <h5>Labial Infini Mate xp</h5>
+                                                    <div class="type-mkup--slider__mobile hidden-sm-up">
+                                                        <span>Selecciona el acabado:</span>
+                                                        <ul class="type-mkup__mobile">
+                                                            <li>+<span>METALLIC</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="type-mkup--slider-item row">
+                                                <img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">
+                                                <div class="type-mkup--slider-info col-7 col-md-12">
+                                                    <h5>Labial Infini Mate xp</h5>
+                                                    <div class="type-mkup--slider__mobile hidden-sm-up">
+                                                        <span>Selecciona el acabado:</span>
+                                                        <ul class="type-mkup__mobile">
+                                                            <li>+<span>METALLIC</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="type-mkup--slider-item row">
+                                                <img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">
+                                                <div class="type-mkup--slider-info col-7 col-md-12">
+                                                    <h5>Labial Infini Mate xp</h5>
+                                                    <div class="type-mkup--slider__mobile hidden-sm-up">
+                                                        <span>Selecciona el acabado:</span>
+                                                        <ul class="type-mkup__mobile">
+                                                            <li>+<span>METALLIC</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="type-mkup--slider-item row">
+                                                <img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">
                                                 <div class="type-mkup--slider-info col-7 col-md-12">
                                                     <h5>Labial Infini Mate xp</h5>
                                                     <div class="type-mkup--slider__mobile hidden-sm-up">
@@ -184,9 +220,9 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="type-mkup--slider-container">
+                                        <div class="clas-3" :class="preSlider()" v-if="tabSlider == 2">
                                             <div class="type-mkup--slider-item row">
-                                                <img class="col-5 col-md-12" src="" alt="">
+                                                <img class="col-5 col-md-12" src="http://cdn.playbuzz.com/cdn/07c62c10-a018-4a4d-b4a9-2fb095126043/5c7c277d-c1e1-4f78-98cc-52aff0d91440.jpg" alt="">
                                                 <div class="type-mkup--slider-info col-7 col-md-12">
                                                     <h5>Labial Infini Mate xp</h5>
                                                     <div class="type-mkup--slider__mobile hidden-sm-up">
@@ -197,10 +233,32 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="type-mkup--slider-container">
                                             <div class="type-mkup--slider-item row">
-                                                <img class="col-5 col-md-12" src="" alt="">
+                                                <img class="col-5 col-md-12" src="http://cdn.playbuzz.com/cdn/07c62c10-a018-4a4d-b4a9-2fb095126043/5c7c277d-c1e1-4f78-98cc-52aff0d91440.jpg" alt="">
+                                                <div class="type-mkup--slider-info col-7 col-md-12">
+                                                    <h5>Labial Infini Mate xp</h5>
+                                                    <div class="type-mkup--slider__mobile hidden-sm-up">
+                                                        <span>Selecciona el acabado:</span>
+                                                        <ul class="type-mkup__mobile">
+                                                            <li>+<span>METALLIC</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="type-mkup--slider-item row">
+                                                <img class="col-5 col-md-12" src="http://cdn.playbuzz.com/cdn/07c62c10-a018-4a4d-b4a9-2fb095126043/5c7c277d-c1e1-4f78-98cc-52aff0d91440.jpg" alt="">
+                                                <div class="type-mkup--slider-info col-7 col-md-12">
+                                                    <h5>Labial Infini Mate xp</h5>
+                                                    <div class="type-mkup--slider__mobile hidden-sm-up">
+                                                        <span>Selecciona el acabado:</span>
+                                                        <ul class="type-mkup__mobile">
+                                                            <li>+<span>METALLIC</span></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="type-mkup--slider-item row">
+                                                <img class="col-5 col-md-12" src="http://cdn.playbuzz.com/cdn/07c62c10-a018-4a4d-b4a9-2fb095126043/5c7c277d-c1e1-4f78-98cc-52aff0d91440.jpg" alt="">
                                                 <div class="type-mkup--slider-info col-7 col-md-12">
                                                     <h5>Labial Infini Mate xp</h5>
                                                     <div class="type-mkup--slider__mobile hidden-sm-up">
@@ -217,6 +275,400 @@
                             </div>
                         </div>
                 </div>
+                <!--<div class="second-mkup" v-if="labioValue == 2">-->
+                    <!--<div class="type-mkup__top col-12">-->
+                        <!--<div class="row">-->
+                            <!--<div class="type-mkup__title text-center text-md-left col-md-5"><h4>labios</h4></div>-->
+                            <!--<div class="type-mkup&#45;&#45;lcontainer col-md-7">-->
+                                <!--<ul class="type-mkup__list row">-->
+                                    <!--<li class="col-4" v-on:click="activeTabSlider(0,$event)" :class="{'type-active' : 'tabSlider == 0'}">-->
+                                        <!--<div class="row">-->
+                                            <!--<img src="" alt="" class="col-md-4">-->
+                                            <!--<h5 class="col-md-8">barra</h5>-->
+                                        <!--</div>-->
+                                    <!--</li>-->
+                                    <!--<li class="col-4" v-on:click="activeTabSlider(1,$event)" :class="{'type-active' : 'tabSlider == 1'}">-->
+                                        <!--<div class="row">-->
+                                            <!--<img src="" alt="" class="col-md-4">-->
+                                            <!--<h5 class="col-md-8">barra</h5>-->
+                                        <!--</div>-->
+                                    <!--</li>-->
+                                    <!--<li class="col-4" v-on:click="activeTabSlider(2,$event)" :class="{'type-active' : 'tabSlider == 2'}">-->
+                                        <!--<div class="row">-->
+                                            <!--<img src="" alt="" class="col-md-4">-->
+                                            <!--<h5 class="col-md-8">barra</h5>-->
+                                        <!--</div>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="type-mkup__bottom col-12" v-if="tabSlider == 0">-->
+                        <!--<div class="row">-->
+                            <!--<div class="type-mkup__title col-md-5 hidden-sm-down">-->
+                                <!--<h5>Privat en tus labios</h5>-->
+                                <!--<p>Selecciona tu formato favorito y mira nuestras opciones para ti.</p> -->
+                            <!--</div>-->
+                            <!--<div class="type-mkup&#45;&#45;slider col-12 col-md-7">-->
+                                <!--<div class="type-mkup&#45;&#45;slider-container ">-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item">-->
+                                        <!--<div class="row">-->
+                                            <!--<img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">-->
+                                            <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12 text-center mt-3">-->
+                                                <!--<h5>Labial Infini Mate xp</h5>-->
+                                                <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                    <!--<span>Selecciona el acabado:</span>-->
+                                                    <!--<ul class="type-mkup__mobile">-->
+                                                        <!--<li>+<span>METALLIC</span></li>-->
+                                                    <!--</ul>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item">-->
+                                        <!--<div class="row">-->
+                                            <!--<img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">-->
+                                            <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12 text-center mt-3">-->
+                                                <!--<h5>Labial Infini Mate xp</h5>-->
+                                                <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                    <!--<span>Selecciona el acabado:</span>-->
+                                                    <!--<ul class="type-mkup__mobile">-->
+                                                        <!--<li>+<span>METALLIC</span></li>-->
+                                                    <!--</ul>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item">-->
+                                        <!--<div class="row">-->
+                                            <!--<img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">-->
+                                            <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12 text-center mt-3">-->
+                                                <!--<h5>Labial Infini Mate xp</h5>-->
+                                                <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                    <!--<span>Selecciona el acabado:</span>-->
+                                                    <!--<ul class="type-mkup__mobile">-->
+                                                        <!--<li>+<span>METALLIC</span></li>-->
+                                                    <!--</ul>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item">-->
+                                        <!--<div class="row">-->
+                                            <!--<img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">-->
+                                            <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12 text-center mt-3">-->
+                                                <!--<h5>Labial Infini Mate xp</h5>-->
+                                                <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                    <!--<span>Selecciona el acabado:</span>-->
+                                                    <!--<ul class="type-mkup__mobile">-->
+                                                        <!--<li>+<span>METALLIC</span></li>-->
+                                                    <!--</ul>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="type-mkup&#45;&#45;slider-container">-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="type-mkup&#45;&#45;slider-container">-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="second-mkup" v-if="labioValue == 3">-->
+                    <!--<div class="type-mkup__top col-12">-->
+                        <!--<div class="row">-->
+                            <!--<div class="type-mkup__title text-center text-md-left col-md-5"><h4>labios</h4></div>-->
+                            <!--<div class="type-mkup&#45;&#45;lcontainer col-md-7">-->
+                                <!--<ul class="type-mkup__list row">-->
+                                    <!--<li class="col-4" v-on:click="activeTabSlider(0,$event)" :class="{'type-active' : 'tabSlider == 0'}">-->
+                                        <!--<div class="row">-->
+                                            <!--<img src="" alt="" class="col-md-4">-->
+                                            <!--<h5 class="col-md-8">barra</h5>-->
+                                        <!--</div>-->
+                                    <!--</li>-->
+                                    <!--<li class="col-4" v-on:click="activeTabSlider(1,$event)" :class="{'type-active' : 'tabSlider == 1'}">-->
+                                        <!--<div class="row">-->
+                                            <!--<img src="" alt="" class="col-md-4">-->
+                                            <!--<h5 class="col-md-8">barra</h5>-->
+                                        <!--</div>-->
+                                    <!--</li>-->
+                                    <!--<li class="col-4" v-on:click="activeTabSlider(2,$event)" :class="{'type-active' : 'tabSlider == 2'}">-->
+                                        <!--<div class="row">-->
+                                            <!--<img src="" alt="" class="col-md-4">-->
+                                            <!--<h5 class="col-md-8">barra</h5>-->
+                                        <!--</div>-->
+                                    <!--</li>-->
+                                <!--</ul>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="type-mkup__bottom col-12" v-if="tabSlider == 0">-->
+                        <!--<div class="row">-->
+                            <!--<div class="type-mkup__title col-md-5 hidden-sm-down">-->
+                                <!--<h5>Privat en tus labios</h5>-->
+                                <!--<p>Selecciona tu formato favorito y mira nuestras opciones para ti.</p> -->
+                            <!--</div>-->
+                            <!--<div class="type-mkup&#45;&#45;slider col-12 col-md-7">-->
+                                <!--<div class="type-mkup&#45;&#45;slider-container ">-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item">-->
+                                        <!--<div class="row">-->
+                                            <!--<img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">-->
+                                            <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12 text-center mt-3">-->
+                                                <!--<h5>Labial Infini Mate xp</h5>-->
+                                                <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                    <!--<span>Selecciona el acabado:</span>-->
+                                                    <!--<ul class="type-mkup__mobile">-->
+                                                        <!--<li>+<span>METALLIC</span></li>-->
+                                                    <!--</ul>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item">-->
+                                        <!--<div class="row">-->
+                                            <!--<img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">-->
+                                            <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12 text-center mt-3">-->
+                                                <!--<h5>Labial Infini Mate xp</h5>-->
+                                                <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                    <!--<span>Selecciona el acabado:</span>-->
+                                                    <!--<ul class="type-mkup__mobile">-->
+                                                        <!--<li>+<span>METALLIC</span></li>-->
+                                                    <!--</ul>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item">-->
+                                        <!--<div class="row">-->
+                                            <!--<img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">-->
+                                            <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12 text-center mt-3">-->
+                                                <!--<h5>Labial Infini Mate xp</h5>-->
+                                                <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                    <!--<span>Selecciona el acabado:</span>-->
+                                                    <!--<ul class="type-mkup__mobile">-->
+                                                        <!--<li>+<span>METALLIC</span></li>-->
+                                                    <!--</ul>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item">-->
+                                        <!--<div class="row">-->
+                                            <!--<img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">-->
+                                            <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12 text-center mt-3">-->
+                                                <!--<h5>Labial Infini Mate xp</h5>-->
+                                                <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                    <!--<span>Selecciona el acabado:</span>-->
+                                                    <!--<ul class="type-mkup__mobile">-->
+                                                        <!--<li>+<span>METALLIC</span></li>-->
+                                                    <!--</ul>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="type-mkup&#45;&#45;slider-container">-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="type-mkup&#45;&#45;slider-container">-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                    <!--<div class="type-mkup&#45;&#45;slider-item row">-->
+                                        <!--<img class="col-5 col-md-12" src="" alt="">-->
+                                        <!--<div class="type-mkup&#45;&#45;slider-info col-7 col-md-12">-->
+                                            <!--<h5>Labial Infini Mate xp</h5>-->
+                                            <!--<div class="type-mkup&#45;&#45;slider__mobile hidden-sm-up">-->
+                                                <!--<span>Selecciona el acabado:</span>-->
+                                                <!--<ul class="type-mkup__mobile">-->
+                                                    <!--<li>+<span>METALLIC</span></li>-->
+                                                <!--</ul>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
             </div>
             <div class="container" v-if="tabValue === 2">
                 <div class="choose-mkup row">
