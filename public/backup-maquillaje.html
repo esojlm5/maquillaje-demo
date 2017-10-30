@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+<div id="app-maquillaje">
+    <section class="banners-maquillaje">
+        <div class="container-fluid">
+            <div class="row mk-list">
+                <div v-on:click="activeTab(1,$event)" :class="{'active' : tabValue === 1}" class="mk-list__items col-12 col-md-4 d-flex align-items-md-end align-items-center justify-content-center" style="background-image:url(images/woman-1.png)">
+                    <div class="mk-list__info text-md-center" >
+                        <h3 class="mk-list__title">privÁt</h3>
+                        <p class="hidden-sm-down">lujo y tratamiento multibeneficio</p>
+                    </div>
+                </div>
+                <div v-on:click="activeTab(2,$event)" :class="{'active' : tabValue === 2}" class="mk-list__items col-12 col-md-4 d-flex align-items-md-end align-items-center justify-content-center" style="background-image:url(images/woman-2.png)">
+                    <div class="mk-list__info text-md-center" >
+                        <h3 class="mk-list__title">CONCENTré</h3>
+                        <p class="hidden-sm-down">lujo y tratamiento multibeneficio</p>
+                    </div>
+                </div>
+                <div v-on:click="activeTab(3,$event)" :class="{'active' : tabValue === 3}" class="mk-list__items col-12 col-md-4 d-flex align-items-md-end align-items-center justify-content-center" style="background-image:url(images/woman-3.png)">
+                    <div class="mk-list__info text-md-center">
+                        <h3 class="mk-list__title">NU</h3>
+                        <p class="hidden-sm-down">lujo y tratamiento multibeneficio</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="first-mkup">
+        <div class="container" v-if="tabValue === 1">
+            <div class="choose-mkup row">
+                <div class="choose-mkup__image hidden-sm-down col-md-4">
+                    <img src="" alt="">
+                </div>
+                <div class="choose-mkup__right col-md-8">
+                    <div class="choose-mkup__title text-center">
+                        <h3><span>privát</span>privát<span>Una línea de maquillaje que resalta tu femenidad.</span></h3>
+                    </div>
+                    <ul class="choose-mkup__list row">
+                        <li class="col-md-4" v-on:click="activeLabios(1,$event,true),sliderCreate()">
+                            <img src="" alt="">
+                            <div class="mk-l-info">
+                                <h4>rostro</h4>
+                                <a>ver más</a>
+                            </div>
+                        </li>
+                        <li class="col-md-4" v-on:click="activeLabios(2,$event,true)">
+                            <img src="" alt="">
+                            <div class="mk-l-info">
+                                <h4>rostro</h4>
+                                <a>ver más</a>
+                            </div>
+                        </li>
+                        <li class="col-md-4" v-on:click="activeLabios(3,$event,true)">
+                            <img src="" alt="">
+                            <div class="mk-l-info">
+                                <h4>rostro</h4>
+                                <a>ver más</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container" v-if="tabValue === 2">
+            <div class="choose-mkup row">
+                <div class="choose-mkup__image hidden-sm-down col-md-4">
+                    <img src="" alt="">
+                </div>
+                <div class="choose-mkup__right col-md-8">
+                    <div class="choose-mkup__title text-center">
+                        <h3><span>privát</span>privát<span>Una línea de maquillaje que resalta tu femenidad.</span></h3>
+                    </div>
+                    <ul class="choose-mkup__list row">
+                        <li class="col-md-4">
+                            <img src="" alt="">
+                            <div class="mk-l-info">
+                                <h4>rostro</h4>
+                                <a>ver más</a>
+                            </div>
+                        </li>
+                        <li class="col-md-4">
+                            <img src="" alt="">
+                            <div class="mk-l-info">
+                                <h4>rostro</h4>
+                                <a>ver más</a>
+                            </div>
+                        </li>
+                        <li class="col-md-4">
+                            <img src="" alt="">
+                            <div class="mk-l-info">
+                                <h4>rostro</h4>
+                                <a>ver más</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container" v-if="tabValue === 3">
+            <div class="choose-mkup row">
+                <div class="choose-mkup__image hidden-sm-down col-md-4">
+                    <img src="" alt="">
+                </div>
+                <div class="choose-mkup__right col-md-8">
+                    <div class="choose-mkup__title text-center">
+                        <h3><span>privát</span>privát<span>Una línea de maquillaje que resalta tu femenidad.</span></h3>
+                    </div>
+                    <ul class="choose-mkup__list row">
+                        <li class="col-md-4">
+                            <img src="" alt="">
+                            <div class="mk-l-info">
+                                <h4>rostro</h4>
+                                <a>ver más</a>
+                            </div>
+                        </li>
+                        <li class="col-md-4">
+                            <img src="" alt="">
+                            <div class="mk-l-info">
+                                <h4>rostro</h4>
+                                <a>ver más</a>
+                            </div>
+                        </li>
+                        <li class="col-md-4">
+                            <img src="" alt="">
+                            <div class="mk-l-info">
+                                <h4>rostro</h4>
+                                <a>ver más</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="second-mkup" v-if="labioStatus == true">
+        <div class="container">
+            <div class="row type-mkup">
+                <div class="type-mkup__top col-12">
+                    <div class="row">
+                        <div class="type-mkup__title col-md-3"><h4>labios</h4></div>
+                        <div class="type-mkup--lcontainer col-md-9">
+                            <ul class="type-mkup__list row">
+                                <li class="col-4">
+                                    <div class="row">
+                                        <img src="" alt="" class="col-md-4">
+                                        <h5 class="col-md-8">barra</h5>
+                                    </div>
+                                </li>
+                                <li class="col-4">
+                                    <div class="row">
+                                        <img src="" alt="" class="col-md-4">
+                                        <h5 class="col-md-8">barra</h5>
+                                    </div>
+                                </li>
+                                <li class="col-4">
+                                    <div class="row">
+                                        <img src="" alt="" class="col-md-4">
+                                        <h5 class="col-md-8">barra</h5>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="type-mkup__bottom col-12 row">
+                    <div class="type-mkup__title col-md-3 hidden-sm-down">
+                        <h5>Privat en tus labios</h5>
+                        <p>Selecciona tu formato favorito y mira nuestras opciones para ti.</p> 
+                    </div>
+                    <div class="type-mkup--slider col-12 col-md-9">
+                        <div class="type-mkup--slider-container type-mkup-slider">
+                            <div class="type-mkup--slider-item row">
+                                <img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">
+                                <div class="type-mkup--slider-info col-7 col-md-12">
+                                    <h5>Labial Infini Mate xp</h5>
+                                    <div class="type-mkup--slider__mobile hidden-sm-up">
+                                        <span>Selecciona el acabado:</span>
+                                        <ul class="type-mkup__mobile">
+                                            <li>+<span>METALLIC</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="type-mkup--slider-item row">
+                                <img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">
+                                <div class="type-mkup--slider-info col-7 col-md-12">
+                                    <h5>Labial Infini Mate xp</h5>
+                                    <div class="type-mkup--slider__mobile hidden-sm-up">
+                                        <span>Selecciona el acabado:</span>
+                                        <ul class="type-mkup__mobile">
+                                            <li>+<span>METALLIC</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="type-mkup--slider-item row">
+                                <img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">
+                                <div class="type-mkup--slider-info col-7 col-md-12">
+                                    <h5>Labial Infini Mate xp</h5>
+                                    <div class="type-mkup--slider__mobile hidden-sm-up">
+                                        <span>Selecciona el acabado:</span>
+                                        <ul class="type-mkup__mobile">
+                                            <li>+<span>METALLIC</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="type-mkup--slider-item row">
+                                <img class="col-5 col-md-12" src="http://pimg.tradeindia.com/00288122/b/0/Our-Valuable-Client-List-Click-on-Image-.jpg" alt="">
+                                <div class="type-mkup--slider-info col-7 col-md-12">
+                                    <h5>Labial Infini Mate xp</h5>
+                                    <div class="type-mkup--slider__mobile hidden-sm-up">
+                                        <span>Selecciona el acabado:</span>
+                                        <ul class="type-mkup__mobile">
+                                            <li>+<span>METALLIC</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="type-mkup--slider-container">
+                            <div class="type-mkup--slider-item row">
+                                <img class="col-5 col-md-12" src="" alt="">
+                                <div class="type-mkup--slider-info col-7 col-md-12">
+                                    <h5>Labial Infini Mate xp</h5>
+                                    <div class="type-mkup--slider__mobile hidden-sm-up">
+                                        <span>Selecciona el acabado:</span>
+                                        <ul class="type-mkup__mobile">
+                                            <li>+<span>METALLIC</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="type-mkup--slider-container">
+                            <div class="type-mkup--slider-item row">
+                                <img class="col-5 col-md-12" src="" alt="">
+                                <div class="type-mkup--slider-info col-7 col-md-12">
+                                    <h5>Labial Infini Mate xp</h5>
+                                    <div class="type-mkup--slider__mobile hidden-sm-up">
+                                        <span>Selecciona el acabado:</span>
+                                        <ul class="type-mkup__mobile">
+                                            <li>+<span>METALLIC</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="type-mkup--slider-container">
+                            <div class="type-mkup--slider-item row">
+                                <img class="col-5 col-md-12" src="" alt="">
+                                <div class="type-mkup--slider-info col-7 col-md-12">
+                                    <h5>Labial Infini Mate xp</h5>
+                                    <div class="type-mkup--slider__mobile hidden-sm-up">
+                                        <span>Selecciona el acabado:</span>
+                                        <ul class="type-mkup__mobile">
+                                            <li>+<span>METALLIC</span></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="three-mkup">
+        <div class="container">
+            <div class="row result-mkup">
+                <div class="left-result col-md-3 d-flex justify-content-center align-items-center">
+                    <h5>acabadospan<span>metallic</span> </h5>
+                </div>
+                <div class="slider-mkup-last col-md-9">
+                    <div class="item"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--<div id="container-lbel">-->
+    <!--<ul>-->
+    <!--<li v-on:click="activeTab(1,$event)" class="lbel-item" :class="{'active' : tabValue === 1}">first item</li>-->
+    <!--<li v-on:click="activeTab(2,$event)" class="lbel-item" :class="{'active' : tabValue === 2}">second item</li>-->
+    <!--<li v-on:click="activeTab(3,$event)" class="lbel-item" :class="{'active' : tabValue === 3}">three item</li>-->
+    <!--</ul>-->
+    <!--<div class="container-lbel-views">-->
+    <!--<transition name="fade" >-->
+    <!--<div class="views-block blue" v-if="tabValue === 1" >-->
+    <!--<ul>-->
+    <!--<li v-on:click="activeLabios(1,$event,true),sliderCreate()"><span>1item</span></li>-->
+    <!--<li v-on:click="activeLabios(2,$event,true)"><span>2item</span></li>-->
+    <!--<li v-on:click="activeLabios(3,$event,true)"><span>3item</span></li>-->
+    <!--</ul>-->
+    <!--<div class="containerlabios" v-if="labioStatus == true">-->
+    <!--<ul class="items-labio">-->
+    <!--<li><span>1labio</span></li>-->
+    <!--<li><span>2labio</span></li>-->
+    <!--<li><span>3labio</span></li>-->
+    <!--</ul>-->
+    <!--<div class="container-slider">-->
+    <!--<h3>slick slider</h3>-->
+    <!--<div class="wrapper">-->
+    <!--<h2>Slick Slider</h2>-->
+    <!--<div class="slick-codepen">-->
+    <!--<div>-->
+    <!--<img src="http://lorempixel.com/540/300/nightlife/1" />-->
+    <!--1-->
+    <!--</div>-->
+
+    <!--<div>-->
+    <!--<img src="http://lorempixel.com/320/340/nightlife/10" />-->
+    <!--2-->
+    <!--</div>-->
+
+    <!--<div>-->
+    <!--<img src="http://lorempixel.com/520/400/nightlife/3" />-->
+    <!--3-->
+    <!--</div>-->
+
+    <!--<div>-->
+    <!--<img src="http://lorempixel.com/380/300/nightlife/4" />-->
+    <!--4-->
+    <!--</div>-->
+
+    <!--<div class="slick-slide">-->
+    <!--<img src="http://lorempixel.com/500/320/nightlife/5" />-->
+    <!--5-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</transition>-->
+    <!--<transition name="fade" >-->
+    <!--<div class="views-block red" v-if="tabValue === 2">-->
+    <!--<ul>-->
+    <!--<li><span>1item</span></li>-->
+    <!--<li><span>2item</span></li>-->
+    <!--<li><span>3item</span></li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</transition>-->
+    <!--<transition name="fade" >-->
+    <!--<div class="views-block grey" v-if="tabValue === 3" >-->
+    <!--<ul>-->
+    <!--<li><span>1item</span></li>-->
+    <!--<li><span>2item</span></li>-->
+    <!--<li><span>3item</span></li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</transition>-->
+    <!--</div>-->
+    <!--</div>-->
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="assets/js/landing.js"> </script>
+</body>
+</html>
